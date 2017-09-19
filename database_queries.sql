@@ -6,4 +6,4 @@ SELECT u.first_name, u.last_name, c.type, c.value FROM users u JOIN contacts c o
 
 SELECT first_name FROM users WHERE id IN (1,3);
 
-SELECT u.first_name || ' ' || u.last_name, COUNT(type) FROM users u JOIN contacts c on u.id = c.user_id GROUP BY first_name, last_name;
+SELECT u.first_name || ' ' || u.last_name, COUNT(user_id) FROM users u JOIN contacts c on u.id = c.user_id GROUP BY first_name, last_name;
